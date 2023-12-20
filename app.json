@@ -1,14 +1,13 @@
 {
   "expo": {
-    "name": "Spy_Cam",
-    "slug": "Spy_Cam",
+    "name": "Spam",
+    "slug": "Spam",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,20 +19,23 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": ["CAMERA", "RECORD_AUDIO"]
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "expo-router"
-    ],
-    "experiments": {
-      "typedRoutes": true
+    
+    "plugins": {
+      "expo-camera": {
+        "permissions": ["CAMERA", "RECORD_AUDIO"]
+      }
+    },
+    "permissions": {
+      "audio": true,
+      "camera": true
     }
   }
 }
